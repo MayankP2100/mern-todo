@@ -7,7 +7,9 @@ import '@fontsource/hind'
 import '@fontsource/montserrat'
 
 const theme = extendTheme({
-  initialColorMode: 'dark', useSystemColorMode: false, fonts: {
+  initialColorMode: 'dark',
+  useSystemColorMode: false,
+  fonts: {
     heading: 'Oswald',
     body: 'Hind',
   }

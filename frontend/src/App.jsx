@@ -1,6 +1,4 @@
 import './App.css'
-// import {useEffect, useRef, useState} from "react";
-// import axios from "axios";
 import Navbar from "./Navbar.jsx";
 import {
   Box, Container, Flex
@@ -12,9 +10,6 @@ import {useEffect} from "react";
 
 function App() {
   const currentPage = usePageStore((state) => state.page);
-
-  useEffect(() => {
-  }, [currentPage]);
 
   return (<>
     <Box
