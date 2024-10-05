@@ -80,7 +80,7 @@ function Navbar() {
                     SEE ALL TODOS
                   </Button>
                   <Button
-                    onClick={() => setPage('create')}
+                    onClick={() => setPage('about')}
                     w='100%'
                     bg={'gray.700'}
                     color={['#98cd92', '#7fc2dd', '#c9abe7']}
@@ -92,7 +92,8 @@ function Navbar() {
                     w='100%'
                     bg={'gray.700'}
                     color={['#98cd92', '#7fc2dd', '#c9abe7']}
-                  >DOCUMENTATION
+                  >
+                    DOCUMENTATION
                   </Button>
                 </VStack>
               </Container>
@@ -102,10 +103,10 @@ function Navbar() {
       </Show>
       <Show breakpoint='(min-width: 801px)'>
         <HStack spacing='1.5rem'>
-          <Button fontSize='1.2rem' variant='ghost' color='#c9abe7' onClick={() => setPage('create')}>CREATE</Button>
-          <Button fontSize='1.2rem' variant='ghost' color='#c9abe7' onClick={() => setPage('todos')}>TODOS</Button>
-          <Button fontSize='1.2rem' variant='ghost' color='#c9abe7' onClick={() => setPage('create')}>ABOUT</Button>
-          <Button fontSize='1.2rem' variant='ghost' color='#c9abe7' onClick={() => setPage('create')}>DOCS</Button>
+          <Button fontSize='1.2rem' variant='none' color='#c9abe7' onClick={() => setPage('create')}>CREATE</Button>
+          <Button fontSize='1.2rem' variant='none' color='#c9abe7' onClick={() => setPage('todos')}>TODOS</Button>
+          <Button fontSize='1.2rem' variant='none' color='#c9abe7' onClick={() => setPage('about')}>ABOUT</Button>
+          <Button fontSize='1.2rem' variant='none' color='#c9abe7' onClick={() => setPage('create')}>DOCS</Button>
         </HStack>
       </Show>
     </Flex>

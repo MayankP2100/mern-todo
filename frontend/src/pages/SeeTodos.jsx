@@ -93,7 +93,7 @@ function SeeTodos() {
           h='60vh'
           gap='2rem'>
           {data.length === 0 && <Container w='80vw' textAlign='center'>
-            <Text fontSize='2rem'>No todos are available 😢</Text>
+            <Text fontSize='2rem' color='gray.200'>No todos are available 😢</Text>
             <Link
               fontSize='2rem'
               color={['#98cd92', '#7fc2dd', '#c9abe7']}

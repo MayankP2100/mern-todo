@@ -20,7 +20,22 @@ importers:
       '@emotion/styled':
         specifier: ^11.13.0
         version: 11.13.0(@emotion/react@11.13.3(@types/react@18.3.10)(react@18.3.1))(@types/react@18.3.10)(react@18.3.1)
+      '@fontsource/hind':
+        specifier: ^5.1.0
+        version: 5.1.0
+      '@fontsource/montserrat':
+        specifier: ^5.1.0
+        version: 5.1.0
+      '@fontsource/open-sans':
+        specifier: ^5.1.0
+        version: 5.1.0
       '@fontsource/oswald':
+        specifier: ^5.1.0
+        version: 5.1.0
+      '@fontsource/raleway':
+        specifier: ^5.1.0
+        version: 5.1.0
+      '@fontsource/roboto':
         specifier: ^5.1.0
         version: 5.1.0
       axios:
@@ -875,8 +890,23 @@ packages:
     resolution: {integrity: sha512-vH9PiIMMwvhCx31Af3HiGzsVNULDbyVkHXwlemn/B0TFj/00ho3y55efXrUZTfQipxoHC5u4xq6zblww1zm1Ig==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
 
+  '@fontsource/hind@5.1.0':
+    resolution: {integrity: sha512-NlENDxkOVJ2J0zCIFvnXVLO6ggUbEdk6/AwhdbM73mDucSm6s52XZyhD87nuqe42K1nPU/SWYGcGyHWQUF1OzA==}
+
+  '@fontsource/montserrat@5.1.0':
+    resolution: {integrity: sha512-HB4+rWP9Y8g6T9RGRVJk2SvAJtx2eBAXuivvPOqQdD806/9WESUfucfH9LqFj3bGgdhNCfh0Rv0NGuwEmBLRiw==}
+
+  '@fontsource/open-sans@5.1.0':
+    resolution: {integrity: sha512-g+mjF8gWUDwck9DrRCkhmFeEj7fskjtKZJKAQguVzSg93lc6ThakTHMRgs0dZfe5qBbktrV839tDrb4bIDyZSA==}
+
   '@fontsource/oswald@5.1.0':
     resolution: {integrity: sha512-MwHMRCNCeTvaUWk15AHVfUi84T4TB4dshJrCOcfBYqUkY0V8IxKEwqFzSgGBG7zIfTZ0Diu+/CKpiktKqo5Gkg==}
+
+  '@fontsource/raleway@5.1.0':
+    resolution: {integrity: sha512-g97nQtuEMVlW95xKCZuDun4gSxmBOxf+7yfValqOwATvJL/98RkCacEsBgJlFNtWxO0+FkmoMl3b9kvZpyQ6VA==}
+
+  '@fontsource/roboto@5.1.0':
+    resolution: {integrity: sha512-cFRRC1s6RqPygeZ8Uw/acwVHqih8Czjt6Q0MwoUoDe9U3m4dH1HmNDRBZyqlMSFwgNAUKgFImncKdmDHyKpwdg==}
 
   '@humanwhocodes/module-importer@1.0.1':
     resolution: {integrity: sha512-bxveV4V8v5Yb4ncFTT3rPSgZBOpCkjfK0y4oVVVJwIuDVBRMDXrPyXRL988i5ap9m9bnyEEjWfm5WkBmtffLfA==}
@@ -3243,7 +3273,17 @@ snapshots:
     dependencies:
       levn: 0.4.1
 
+  '@fontsource/hind@5.1.0': {}
+
+  '@fontsource/montserrat@5.1.0': {}
+
+  '@fontsource/open-sans@5.1.0': {}
+
   '@fontsource/oswald@5.1.0': {}
+
+  '@fontsource/raleway@5.1.0': {}
+
+  '@fontsource/roboto@5.1.0': {}
 
   '@humanwhocodes/module-importer@1.0.1': {}
 

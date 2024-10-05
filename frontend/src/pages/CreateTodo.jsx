@@ -3,7 +3,7 @@ import {useRef} from "react";
 import axios from "axios";
 
 function CreateTodo() {
-  const url = 'http://localhost:3000/todos';
+  const url = 'http://192.168.0.119:3000/todos';
   const titleRef = useRef();
   const descRef = useRef();
 

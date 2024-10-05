@@ -29,7 +29,7 @@ function ShowCard(props) {
                 overflowY='scroll'
                 sx={{'scrollbarWidth': 'none'}}
               >
-                {done ? <p> <CheckCircleIcon mr='1rem' fontSize='2rem'/> <s>{title}</s></p> : <p>{title}</p>}
+                {done ? <p><CheckCircleIcon mr='1rem' fontSize='2rem'/> <s>{title}</s></p> : <p>{title}</p>}
               </Text>
             </Box>
             <Box>

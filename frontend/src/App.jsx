@@ -6,7 +6,7 @@ import {
 import CreateTodo from "./pages/CreateTodo.jsx";
 import SeeTodos from "./pages/SeeTodos.jsx";
 import usePageStore from "./store.js";
-import {useEffect} from "react";
+import About from "./pages/About.jsx";
 
 function App() {
   const currentPage = usePageStore((state) => state.page);
@@ -26,6 +26,7 @@ function App() {
           >
             {currentPage === 'todos' && <SeeTodos></SeeTodos>}
             {currentPage === 'create' && <CreateTodo></CreateTodo>}
+            {currentPage === 'about' && <About></About>}
           </Container>
         </Flex>
       </Box>
