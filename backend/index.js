@@ -3,12 +3,16 @@ import Todo, {connectDb} from "./db.js";
 import bodyParser from "body-parser";
 import db from "./db.js";
 import cors from "cors";
+import dotenv from "dotenv";
+import path from "path";
 
+dotenv.config();
 
 // *** CONSTANTS ***
 const app = express()
-const port = 3000
+const port = process.env.PORT || 3000;
 const jsonParser = bodyParser.json()
+const __dirname = path.resolve();
 
 
 app.use(cors())
@@ -18,7 +22,6 @@ app.use(cors())
 app.get('/todos', async (req, res) => {
   try {
     const todos = await db.find({});
-    console.log(todos);
     res.send(todos);
   } catch (error) {
     console.log('Error while finding', error);
@@ -62,6 +65,14 @@ app.put('/todos/:id', jsonParser, async (req, res) => {
   }
 });
 
+
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static(path.join(__dirname, "/frontend/dist")));
+
+  app.get("*", (req, res) => {
+    res.sendFile(path.resolve(__dirname, "frontend", "dist", "index.html"));
+  })
+}
 
 // *** API RUN ***
 app.listen(port, () => {

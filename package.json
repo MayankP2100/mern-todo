@@ -1,5 +1,22 @@
 {
-	"dependencies": {
-		"zustand": "5.0.0-rc.2"
-	}
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npm install && pnpm install --prefix frontend && npm run build --prefix frontend",
+    "start": "node backend/index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.0",
+    "mongoose": "^8.6.3",
+    "zustand": "^5.0.0-rc.2"
+  }
 }

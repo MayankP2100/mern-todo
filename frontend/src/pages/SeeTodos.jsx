@@ -19,6 +19,7 @@ import {
   Text,
   Textarea,
   useDisclosure,
+  useToast,
   VStack
 } from "@chakra-ui/react";
 import ShowCard from "../Card.jsx";
@@ -35,6 +36,7 @@ function SeeTodos() {
   const [data, setData] = useState([]);
   const [updateData, setUpdateData] = useState({});
   const updatePage = usePageStore((state) => state.updatePage);
+  const toast = useToast()
 
   useEffect(() => {
     getTodo().then()
@@ -56,6 +58,9 @@ function SeeTodos() {
   async function deleteTodo(id) {
     try {
       await axios.delete(url + id);
+      await toast({
+        title: "Success", description: "Todo has been deleted", status: 'success', duration: 1000, isClosable: true
+      })
     } catch (e) {
       console.error(e);
     }
@@ -65,6 +70,9 @@ function SeeTodos() {
     try {
       await axios.put(url + id, {
         title: title, desc: desc, done: done
+      })
+      await toast({
+        title: "Success", description: "Todo has been updated", status: 'success', duration: 1000, isClosable: true
       })
     } catch (e) {
       console.error(e);
@@ -80,6 +88,9 @@ function SeeTodos() {
         bgClip='text'
         color='transparent'
         p='4'
+        sx={{
+          filter: 'drop-shadow(3px 3px rgba(0, 0, 0, 0.3))'
+        }}
       >ALL TODOS 📃</Heading>
       <Divider></Divider>
       <Box>
@@ -106,10 +117,13 @@ function SeeTodos() {
             return <GridItem key={data._id}>
               <ShowCard title={data.title} desc={data.desc} done={data.done}></ShowCard>
               <Flex justifyContent='center'>
-                <ButtonGroup isAttached bg='gray.700' variant='outline'>
+                <ButtonGroup rounded={'md'} isAttached bg='gray.700' variant='outline'>
                   <IconButton
+                    _hover={{
+                      backgroundColor: 'gray.700'
+                    }}
                     onClick={() => {
-                      updateTodo(data._id, data.title, data.desc, !data.done)
+                      updateTodo(data._id, data.title, data.desc, !data.done).then()
                     }}
                     color='green.300'
                     aria-label='Mark todo as done'
@@ -117,6 +131,9 @@ function SeeTodos() {
                     icon={<CheckIcon/>}>
                   </IconButton>
                   <IconButton
+                    _hover={{
+                      backgroundColor: 'gray.700'
+                    }}
                     onClick={() => {
                       onOpen();
                       setUpdateData({
@@ -129,6 +146,9 @@ function SeeTodos() {
                     icon={<EditIcon/>}>
                   </IconButton>
                   <IconButton
+                    _hover={{
+                      backgroundColor: 'gray.700'
+                    }}
                     onClick={() => deleteTodo(data._id)}
                     color='red.300'
                     aria-label='Delete todo'
@@ -147,7 +167,10 @@ function SeeTodos() {
                     bg=''
                     backdropFilter='blur(10px)'
                   />
-                  <ModalContent>
+                  <ModalContent
+                    bg={'gray.800'}
+                    color={'gray.200'}
+                  >
                     <ModalCloseButton></ModalCloseButton>
                     <ModalBody>
                       <VStack spacing='1rem' my='8'>
@@ -190,6 +213,7 @@ function SeeTodos() {
                           }}
                         />
                         <Button
+                          bg={'gray.700'}
                           onClick={() => updateTodo(updateData.id, updateData.title, updateData.desc)}
                           fontWeight='semibold'
                           fontSize='1.5rem'
@@ -197,6 +221,9 @@ function SeeTodos() {
                           py='8'
                           px='6'
                           mt='6'
+                          sx={{
+                            filter: 'drop-shadow(0 4px rgba(0, 0, 0, 0.3))'
+                          }}
                         >Update Todo</Button>
                       </VStack>
                     </ModalBody>

@@ -29,6 +29,9 @@ function Navbar() {
 
   return (<>
     <Flex
+      sx={{
+        filter: 'drop-shadow(0 3px rgba(0, 0, 0, 0.3))'
+      }}
       bg='gray.900'
       justify='space-between'
       py='1rem'
@@ -40,6 +43,9 @@ function Navbar() {
         color='transparent'
         fontWeight='extrabold'
         size='2xl'
+        sx={{
+          filter: 'drop-shadow(3px 3px rgba(0, 0, 0, 0.3))'
+        }}
       >MernTodo</Heading>
       <Show breakpoint='(max-width: 800px)'>
         <IconButton
@@ -59,7 +65,7 @@ function Navbar() {
         >
           <DrawerOverlay></DrawerOverlay>
           <DrawerContent px='0.5rem' bg='gray.900'>
-            <DrawerCloseButton p='1rem' size='3xl'></DrawerCloseButton>
+            <DrawerCloseButton color={'gray.200'} p='1rem' size='3xl'></DrawerCloseButton>
             <DrawerBody px='0.5rem' py='4rem'>
               <Container>
                 <VStack spacing='1rem' mt='1rem'>
@@ -67,6 +73,9 @@ function Navbar() {
                     onClick={() => setPage('create')}
                     w='100%'
                     bg={'gray.700'}
+                    _focus={{
+                      backgroundColor: 'gray.700'
+                    }}
                     color={['#98cd92', '#7fc2dd', '#c9abe7']}
                   >
                     CREATE A TODO
@@ -75,6 +84,9 @@ function Navbar() {
                     onClick={() => setPage('todos')}
                     w='100%'
                     bg={'gray.700'}
+                    _focus={{
+                      backgroundColor: 'gray.700'
+                    }}
                     color={['#98cd92', '#7fc2dd', '#c9abe7']}
                   >
                     SEE ALL TODOS
@@ -83,14 +95,20 @@ function Navbar() {
                     onClick={() => setPage('about')}
                     w='100%'
                     bg={'gray.700'}
+                    _focus={{
+                      backgroundColor: 'gray.700'
+                    }}
                     color={['#98cd92', '#7fc2dd', '#c9abe7']}
                   >
                     ABOUT ME
                   </Button>
                   <Button
-                    onClick={() => setPage('create')}
+                    onClick={() => setPage('docs')}
                     w='100%'
                     bg={'gray.700'}
+                    _focus={{
+                      backgroundColor: 'gray.700'
+                    }}
                     color={['#98cd92', '#7fc2dd', '#c9abe7']}
                   >
                     DOCUMENTATION
@@ -103,10 +121,38 @@ function Navbar() {
       </Show>
       <Show breakpoint='(min-width: 801px)'>
         <HStack spacing='1.5rem'>
-          <Button fontSize='1.2rem' variant='none' color='#c9abe7' onClick={() => setPage('create')}>CREATE</Button>
-          <Button fontSize='1.2rem' variant='none' color='#c9abe7' onClick={() => setPage('todos')}>TODOS</Button>
-          <Button fontSize='1.2rem' variant='none' color='#c9abe7' onClick={() => setPage('about')}>ABOUT</Button>
-          <Button fontSize='1.2rem' variant='none' color='#c9abe7' onClick={() => setPage('create')}>DOCS</Button>
+          <Button
+            sx={{
+              filter: 'drop-shadow(3px 3px rgba(0, 0, 0, 0.3))'
+            }}
+            fontSize='1.2rem'
+            variant='none'
+            color='#c9abe7'
+            onClick={() => setPage('create')}>CREATE</Button>
+          <Button
+            sx={{
+              filter: 'drop-shadow(3px 3px rgba(0, 0, 0, 0.3))'
+            }}
+            fontSize='1.2rem'
+            variant='none'
+            color='#c9abe7'
+            onClick={() => setPage('todos')}>TODOS</Button>
+          <Button
+            sx={{
+              filter: 'drop-shadow(3px 3px rgba(0, 0, 0, 0.3))'
+            }}
+            fontSize='1.2rem'
+            variant='none'
+            color='#c9abe7'
+            onClick={() => setPage('about')}>ABOUT</Button>
+          <Button
+            sx={{
+              filter: 'drop-shadow(3px 3px rgba(0, 0, 0, 0.3))'
+            }}
+            fontSize='1.2rem'
+            variant='none'
+            color='#c9abe7'
+            onClick={() => setPage('docs')}>DOCS</Button>
         </HStack>
       </Show>
     </Flex>

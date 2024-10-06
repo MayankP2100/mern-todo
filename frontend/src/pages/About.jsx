@@ -15,6 +15,9 @@ function About() {
   return (<>
     <VStack w='100%' mt='1rem'>
       <Heading
+        sx={{
+          filter: 'drop-shadow(3px 3px rgba(0, 0, 0, 0.3))'
+        }}
         textAlign='center'
         bgGradient={['linear(to-tr, teal.300, yellow.400)', 'linear(to-t, blue.200, teal.500)', 'linear(to-b, orange.100, purple.300)',]}
         bgClip='text'
@@ -22,7 +25,7 @@ function About() {
       >About Me 👤</Heading>
       <Divider></Divider>
       <Container>
-        <Card borderRadius='lg'>
+        <Card borderRadius='lg' bg={'gray.700'} color={'gray.200'}>
           <CardBody>
             <Image
               w={'100%'}
@@ -38,6 +41,9 @@ function About() {
               bgGradient={['linear(to-tr, teal.300, yellow.400)', 'linear(to-t, blue.200, teal.500)', 'linear(to-b, orange.100, purple.300)',]}
               bgClip='text'
               color='transparent'
+              sx={{
+                filter: 'drop-shadow(0 4px rgba(0, 0, 0, 0.3))'
+              }}
             >Dev - Mayank Pal</Heading>
             <Text fontSize={'0.8rem'} color='gray.400'>Kalyani, West Bengal</Text>
             <Text fontSize={'0.7rem'} color='gray.400'>Studying Data Science in B.Tech-CSE</Text>

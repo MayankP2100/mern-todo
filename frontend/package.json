@@ -22,6 +22,7 @@
     "@fontsource/roboto": "^5.1.0",
     "axios": "^1.7.7",
     "framer-motion": "^11.9.0",
+    "mern-todo": "file:..",
     "nodemon": "^3.1.7",
     "prop-types": "^15.8.1",
     "react": "^18.3.1",
