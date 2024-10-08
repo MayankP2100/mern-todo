@@ -1,6 +1,6 @@
 import express from "express";
 import {connectDb} from "./db.js";
-// import cors from "cors";
+import cors from "cors";
 import dotenv from "dotenv";
 import path from "path";
 import todoRoutes from "./routes/todo.routes.js";
@@ -12,13 +12,13 @@ const app = express()
 const port = process.env.PORT || 3000;
 const __dirname = path.resolve();
 
-// *** HANDLERS ***
+// *** MIDDLEWARES ***
 app.use(express.json())
-// app.use(cors())
+app.use(cors())
 app.use('/todos', todoRoutes)
 
-
-if (process.env.NODE_ENV === "Production") {
+// *** PRODUCTION ***
+if (process.env.NODE_ENV === "production") {
   app.use(express.static(path.join(__dirname, "/frontend/dist")));
 
   app.get("*", (req, res) => {

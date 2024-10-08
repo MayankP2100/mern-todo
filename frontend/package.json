@@ -21,6 +21,7 @@
     "@fontsource/raleway": "^5.1.0",
     "@fontsource/roboto": "^5.1.0",
     "axios": "^1.7.7",
+    "backend": "file:..",
     "framer-motion": "^11.9.0",
     "mern-todo": "file:..",
     "nodemon": "^3.1.7",

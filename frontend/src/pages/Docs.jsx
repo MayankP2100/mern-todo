@@ -1,7 +1,17 @@
 import {
-  Highlight, AccordionButton, AccordionPanel, Box, Container, Divider, Heading, UnorderedList, VStack, Text, Code
+  Highlight,
+  AccordionButton,
+  AccordionPanel,
+  Box,
+  Container,
+  Divider,
+  Heading,
+  UnorderedList,
+  VStack,
+  Text,
+  Code,
+  AccordionIcon, ListItem, Accordion, AccordionItem, OrderedList
 } from "@chakra-ui/react";
-import {Accordion, AccordionIcon, AccordionItem, ListItem, OrderedList} from "@chakra-ui/icons";
 
 function Docs() {
   return (<>

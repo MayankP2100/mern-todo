@@ -7,12 +7,13 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "SET NODE_ENV=development && node backend/index.js",
-    "build": "npm install && pnpm install --prefix frontend --production=false && npm run build --prefix frontend",
+    "build": "npm install && npm install --prefix frontend --production=false && npm run build --prefix frontend",
     "start": "node backend/index.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@chakra-ui/icons": "^2.2.4",
     "body-parser": "^1.20.3",
     "cors": "^2.8.5",
     "dotenv": "^16.4.5",
