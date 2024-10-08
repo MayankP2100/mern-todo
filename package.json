@@ -6,7 +6,8 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "npm install && pnpm install --prefix frontend && npm run build --prefix frontend",
+    "dev": "SET NODE_ENV=development && node backend/index.js",
+    "build": "npm install && pnpm install --prefix frontend --production=false && npm run build --prefix frontend",
     "start": "node backend/index.js"
   },
   "author": "",

@@ -32,7 +32,7 @@ function SeeTodos() {
   const titleRef = useRef();
   const descRef = useRef();
   const {isOpen, onOpen, onClose} = useDisclosure();
-  const url = 'http://localhost:3000/todos/';
+  const url = '/todos/';
   const [data, setData] = useState([]);
   const [updateData, setUpdateData] = useState({});
   const updatePage = usePageStore((state) => state.updatePage);
