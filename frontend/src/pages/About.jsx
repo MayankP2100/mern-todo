@@ -61,11 +61,11 @@ function About() {
                 borderRadius='lg'
                 border='2px'
                 borderColor={['#98cd92', '#7fc2dd', '#c9abe7']}
+                color={['#98cd92', '#7fc2dd', '#c9abe7']}
                 w='full'
                 href='https://www.instagram.com/mayank._.2100/'
                 isExternal
               >
-                <Image w='2rem' src='../public/instagram.png'></Image>
                 Instagram
               </Link>
               <Link
@@ -75,11 +75,11 @@ function About() {
                 borderRadius='lg'
                 border='2px'
                 borderColor={['#98cd92', '#7fc2dd', '#c9abe7']}
+                color={['#98cd92', '#7fc2dd', '#c9abe7']}
                 w='full'
                 href='https://x.com/MayP2100/'
                 isExternal
               >
-                <Image w='1.5rem' src='../public/twitter.png'></Image>
                 Twitter/X
               </Link>
             </HStack>

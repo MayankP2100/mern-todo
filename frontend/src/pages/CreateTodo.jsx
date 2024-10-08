@@ -53,6 +53,9 @@ function CreateTodo() {
       <Textarea ref={descRef} resize='none'
                 placeholder='All homeworks due must be completed by next Sunday.'/>
       <Button
+        _hover={{
+          backgroundColor: 'gray.700'
+        }}
         bg={'gray.700'}
         _focus={{
           backgroundColor: 'gray.700'
